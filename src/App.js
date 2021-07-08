@@ -1,10 +1,11 @@
-
-import CoustomerData from './components/CoustomerData'
+import Dt from './components/Dt'
 function App() {
   return (
-    <div >
-      <h1 style={{textAlign:'center'}}>Balance</h1>
-      <CoustomerData/>
+    <div style={{textAlign:'center'}}>
+      <h1 >Balance</h1>
+      <Dt/>
+      {/* <Dropdown/>
+      <CoustomerTable/> */}
     </div>
   );
 }

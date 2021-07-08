@@ -2,12 +2,13 @@ import React,{useState} from 'react';
 
 
 const CoustomerData = () => {  
-
+//initial balance state 
+  const [bal1,setbal1]=useState(2000);
+  const [bal2,setbal2]=useState(3000);
+  const [bal3,setbal3]=useState(4000);
   
-  //input which we are taking 
+  //input which we are taking -- for direct base
   const [inputValue,setInputValue] = useState()
-  
-  const baldict = [100,1,2];
   
   const inputHandeler = (event)=>{
     console.log(event.target.value);
@@ -15,13 +16,13 @@ const CoustomerData = () => {
     setInputValue(Number(event.target.value))
   }
 
-  const [dropdownValue1,setdropdownVAlue1]=useState();
+  const [dropdownValue1,setdropdownVAlue1]=useState(bal1);
 
   const optionHandel1=(event)=>{
     setdropdownVAlue1(event.target.value)
   }
 
-  const [dropdownValue2,setdropdownVAlue2]=useState();
+  const [dropdownValue2,setdropdownVAlue2]=useState(bal2);
 
   const optionHandel2=(event)=>{
     setdropdownVAlue2(event.target.value)
@@ -29,30 +30,32 @@ const CoustomerData = () => {
   const btnHandeler = () =>{
      console.log(dropdownValue1,dropdownValue2)
      console.log('dpvalue',{dropdownValue1})
-     
+     setbal1(dropdownValue1-inputValue)
+    setbal2(dropdownValue2+inputValue)
   }
     return (
   <div>
     
     <select onChange={optionHandel1}>
-      <option value="a">jhon</option>
-      <option value="a">marry</option>
-      <option value="a">july</option>
+      <option value={bal1}>jhon</option>
+      <option value={bal2}>marry</option>
+      <option value={bal3}>july</option>
     </select>
     <select onChange={optionHandel2}>
-      <option value="{bal1}">jhon</option>
-      <option value="{bal2}">marry</option>
-      <option value="{bal3}">july</option>
+      <option value={bal1}>jhon</option>
+      <option value={bal2}>marry</option>
+      <option value={bal3}>july</option>
     </select>
     
-    <p>first {dropdownValue1}</p>
-    <p>second {dropdownValue2}</p>
+    <h1>first {dropdownValue1}</h1>
+    <h1>second {dropdownValue2}</h1>
     
   
     
     <h2>Balance</h2>
     
     {/* table */}
+    <h3>Transfer from person1 to person2</h3>
     <input onChange={inputHandeler} type='Number'/>
     <button onClick={btnHandeler} >transfer</button>
     <table>
@@ -67,17 +70,17 @@ const CoustomerData = () => {
         <tr>
           <td>John</td>
           <td>Doe</td>
-          <td>{baldict[0]}</td>
+          <td>{bal1}</td>
         </tr>
         <tr>
           <td>Mary</td>
           <td>Moe</td>
-          <td>{baldict[1]}</td>
+          <td>{bal2}</td>
         </tr>
         <tr>
           <td>July</td>
           <td>Dooley</td>
-          <td>{baldict[2]}</td>
+          <td>{bal3}</td>
         </tr>
       </tbody>
     </table>
