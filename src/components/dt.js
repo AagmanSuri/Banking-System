@@ -17,42 +17,39 @@ const CoustomerData = () => {
     console.log(event.target.value);
     setInputValue(Number(event.target.value))
   }
-  const transferHandeler = () =>{
-    setbal({...bal,value1:bal.value1+inputValue,value2:bal.value2-inputValue})
+  
+  const [dropdownValue1,setdropdownVAlue1]=useState();
+
+  const optionHandel1=(event)=>{
+    setdropdownVAlue1(event.target.value)
   }
-  // const [dropdownValue1,setdropdownVAlue1]=useState();
 
-  // const optionHandel1=(event)=>{
-  //   setdropdownVAlue1(event.target.value)
-  // }
+  const [dropdownValue2,setdropdownVAlue2]=useState();
 
-  // const [dropdownValue2,setdropdownVAlue2]=useState();
-
-  // const optionHandel2=(event)=>{
-  //   setdropdownVAlue2(event.target.value)
-  // }
-  // const btnHandeler = () =>{
-  //    console.log(dropdownValue1,dropdownValue2)
-  //    console.log('dpvalue',{dropdownValue1})
-  //    setbal1(dropdownValue1-inputValue)
-  //   setbal2(dropdownValue2+inputValue)
-  // }
+  const optionHandel2=(event)=>{
+    setdropdownVAlue2(event.target.value)
+  }
+  const transferHandeler = () =>{
+    setbal({...bal,dropdownValue1:bal.dropdownValue1+inputValue,dropdownValue2:bal.dropdownValue2-inputValue})
+    console.log(bal);
+  }
+ 
     return (
   <div>
     
-    {/* <select onChange={optionHandel1}>
-      <option value={bal1}>jhon</option>
-      <option value={bal2}>marry</option>
-      <option value={bal3}>july</option>
+    <select onChange={optionHandel1}>
+      <option value="value1">jhon</option>
+      <option value="value2">marry</option>
+      <option value="value3">july</option>
     </select>
     <select onChange={optionHandel2}>
-      <option value={bal1}>jhon</option>
-      <option value={bal2}>marry</option>
-      <option value={bal3}>july</option>
+      <option value="value1">jhon</option>
+      <option value="value2">marry</option>
+      <option value="value3">july</option>
     </select>
     
     <h1>first {dropdownValue1}</h1>
-    <h1>second {dropdownValue2}</h1> */}
+    <h1>second {dropdownValue2}</h1>
     
   
     
