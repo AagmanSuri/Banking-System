@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 
 
-const CoustomerData = () => {  
+const Dt = () => {  
 //initial balance state 
   const [bal,setbal]=useState({
     value1:2000,
@@ -29,9 +29,15 @@ const CoustomerData = () => {
   const optionHandel2=(event)=>{
     setdropdownVAlue2(event.target.value)
   }
+  
   const transferHandeler = () =>{
-    setbal({...bal,dropdownValue1:bal.dropdownValue1+inputValue,dropdownValue2:bal.dropdownValue2-inputValue})
-    console.log(bal);
+  // let updateValue1 = dropdownValue1
+    console.log(bal.value1);
+    console.log(bal.value1+inputValue)
+    console.log(dropdownValue1)
+    setbal({...bal,value1:bal.dropdownValue1+inputValue,dropdownValue2:bal.dropdownValue2-inputValue})
+  
+    
   }
  
     return (
@@ -88,4 +94,4 @@ const CoustomerData = () => {
 </div>
     )
 }
-export default CoustomerData;
+export default Dt;
