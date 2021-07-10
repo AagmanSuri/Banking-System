@@ -1,8 +1,8 @@
-import Dt from './components/Dt'
+import Banking1 from './components/Banking1'
 function App() {
   return (
     <div style={{textAlign:'center'}}>
-      <Dt/>
+      <Banking1/>
     </div>
   );
 }
