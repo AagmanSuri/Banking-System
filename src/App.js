@@ -75,15 +75,22 @@ function App() {
         value2: balance.value2 - valueToUpdate,
       });
     }
+
   };
   return (
     <Router>
       <div className="App">
         <Navbar />
         <Switch>
-          <Route path="/" exact component={Home}/>
-          <Route path="/Banking" component={props => < Banking1 handleForm={handleForm} />}/>
-          <Route path="/CoustomerData" component={props => <Table balance={balance} />}/>
+          <Route path="/" exact component={Home} />
+          <Route
+            path="/Banking"
+            component={(props) => <Banking1 handleForm={handleForm} />}
+          />
+          <Route
+            path="/CoustomerData"
+            component={(props) => <Table balance={balance} />}
+          />
         </Switch>
       </div>
     </Router>

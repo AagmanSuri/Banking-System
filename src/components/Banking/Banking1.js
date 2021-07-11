@@ -1,7 +1,8 @@
 import "./Banking.css";
+
 const Banking1 = (props) => {
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       <form onSubmit={props.handleForm}>
         <h4>Transfer To</h4>
         <select>

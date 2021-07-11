@@ -2,7 +2,7 @@ import React from "react";
 
 const Table = (props) => {
   return (
-    <div>
+    <div style={{textAlign:"center", marginLeft:'37rem',marginTop:'5rem'}}>
       <table>
         <thead>
           <tr>
