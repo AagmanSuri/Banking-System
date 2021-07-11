@@ -2,6 +2,7 @@ import { useState } from "react";
 import Banking1 from "./components/Banking/Banking1";
 import Table from "./components/Table/Table";
 import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Home/Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
   const [balance, setBalance] = useState({
@@ -76,18 +77,16 @@ function App() {
     }
   };
   return (
-    <div style={{ textAlign: "center" }}>
-      <Router>
+    <Router>
+      <div className="App">
+        <Navbar />
         <Switch>
-          <Navbar />
-          <Route path="/" exact component={<Table balance={balance} />} />
-          <Route
-            path="/Banking"
-            component={<Banking1 handleForm={handleForm} balance={balance} />}
-          />
+          <Route path="/" exact component={Home}/>
+          <Route path="/Banking" component={props => < Banking1 handleForm={handleForm} />}/>
+          <Route path="/CoustomerData" component={props => <Table balance={balance} />}/>
         </Switch>
-      </Router>
-    </div>
+      </div>
+    </Router>
   );
 }
 
