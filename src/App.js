@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Banking1 from './components/Banking/Banking1';
 import Table from './components/Table/Table'
+import Navbar from './components/Navbar/Navbar'
 function App() {
 
    const [balance, setBalance] = useState({
@@ -78,6 +79,7 @@ function App() {
   };
   return (
     <div style={{textAlign:'center'}}>
+      <Navbar/>
       <Banking1 handleForm={handleForm} balance={balance} />
       <Table balance={balance}/>
     </div>
