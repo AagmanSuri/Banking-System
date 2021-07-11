@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import Banking1 from './components/Banking/Banking1';
-import Table from './components/Table/Table'
-import Navbar from './components/Navbar/Navbar'
+import { useState } from "react";
+import Banking1 from "./components/Banking/Banking1";
+import Table from "./components/Table/Table";
+import Navbar from "./components/Navbar/Navbar";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
-
-   const [balance, setBalance] = useState({
+  const [balance, setBalance] = useState({
     value1: 1000, //ashray
     value2: 2000, //aagman
     value3: 3000, //sanket
@@ -22,7 +22,6 @@ function App() {
     if (
       e.target[0].value === "Ashray" &&
       e.target[1].value === "Sanket Bhaiya"
-      
     ) {
       setBalance({
         ...balance,
@@ -75,13 +74,19 @@ function App() {
         value2: balance.value2 - valueToUpdate,
       });
     }
-    
   };
   return (
-    <div style={{textAlign:'center'}}>
-      <Navbar/>
-      <Banking1 handleForm={handleForm} balance={balance} />
-      <Table balance={balance}/>
+    <div style={{ textAlign: "center" }}>
+      <Router>
+        <Switch>
+          <Navbar />
+          <Route path="/" exact component={<Table balance={balance} />} />
+          <Route
+            path="/Banking"
+            component={<Banking1 handleForm={handleForm} balance={balance} />}
+          />
+        </Switch>
+      </Router>
     </div>
   );
 }
