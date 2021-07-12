@@ -8,3 +8,8 @@ ul{
     display: flex;
     justify-content: space-between;
 }
+.Link{
+text-decoration: none;
+list-style: none;
+color: white;
+}

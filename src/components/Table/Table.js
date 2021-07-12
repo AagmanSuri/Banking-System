@@ -1,5 +1,5 @@
 import React from "react";
-
+import './Table.css'
 const Table = (props) => {
   return (
     <div style={{textAlign:"center", marginLeft:'37rem',marginTop:'5rem'}}>
