@@ -1,5 +1,5 @@
 import "./Banking.css";
-import React from 'react';
+import React from "react";
 const Banking1 = (props) => {
   return (
     <div style={{ textAlign: "center" }}>
@@ -7,13 +7,14 @@ const Banking1 = (props) => {
       <h2>This portal allows you to transfer money.</h2>
       <h3>Please fill the required details</h3>
       <form onSubmit={props.handleForm}>
-        <h4>Transfer To</h4>
+        <label>Transfer to : </label>
         <select>
           <option>Ashray</option>
           <option>Aagman</option>
           <option>Sanket Bhaiya</option>
         </select>
-        <h4>Transfer from</h4>
+<br></br><br></br>
+        <label>Transfer From : </label>
         <select>
           <option>Sanket Bhaiya</option>
           <option>Aagman</option>
