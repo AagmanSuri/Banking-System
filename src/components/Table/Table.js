@@ -1,14 +1,15 @@
 import React from "react";
-import './Table.css'
+import "./Table.css";
 const Table = (props) => {
   return (
-    <div style={{textAlign:"center", marginLeft:'37rem',marginTop:'5rem'}}>
-      <table>
+    <div className="center">
+      
+      <table className="table,center">
         <thead>
-          <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Balance</th>
+          <tr className="tr">
+            <th className="th">Firstname</th>
+            <th className="th">Lastname</th>
+            <th className="th">Balance</th>
           </tr>
         </thead>
         <tbody>
