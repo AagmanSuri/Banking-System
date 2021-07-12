@@ -1,8 +1,11 @@
 import { useState } from "react";
+import React from "react";
 import Banking1 from "./components/Banking/Banking1";
 import Table from "./components/Table/Table";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
+ import Particles from 'react-particles-js';
+ import './App.css'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
   const [balance, setBalance] = useState({
@@ -75,12 +78,22 @@ function App() {
         value2: balance.value2 - valueToUpdate,
       });
     }
-
   };
-  
+  const particlesOption={
+    particles: {
+        number:{
+          value:30,
+          density:{
+            enable:true,
+            value_area:800
+          }
+        }
+    }
+  }
   return (
     <Router>
       <div className="App">
+      <Particles className='particles' params={particlesOption} />   
         <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />

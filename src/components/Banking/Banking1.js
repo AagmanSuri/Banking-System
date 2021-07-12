@@ -1,5 +1,5 @@
 import "./Banking.css";
-
+import React from 'react';
 const Banking1 = (props) => {
   return (
     <div style={{ textAlign: "center" }}>
