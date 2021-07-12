@@ -1,6 +1,6 @@
 import React from "react";
 import "./Table.css";
-import bank from './banking1.svg'
+import bank from "./banking1.svg";
 const Table = (props) => {
   return (
     <div className="center">
