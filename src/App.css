@@ -2,10 +2,7 @@
 .App {
     text-align: center;
   }
-  .center{
-    display: flex;
-    justify-content: center;
-  }
+  
   .particles{
     position: fixed;
     top: 0;

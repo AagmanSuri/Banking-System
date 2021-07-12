@@ -25,7 +25,7 @@ function App() {
 
     if (
       e.target[0].value === "Ashray" &&
-      e.target[1].value === "Sanket Bhaiya"
+      e.target[1].value === "Sanket"
     ) {
       setBalance({
         ...balance,
@@ -43,7 +43,7 @@ function App() {
       });
     } else if (
       e.target[0].value === "Aagman" &&
-      e.target[1].value === "Sanket Bhaiya"
+      e.target[1].value === "Sanket"
     ) {
       setBalance({
         ...balance,
@@ -60,7 +60,7 @@ function App() {
         value1: balance.value1 - valueToUpdate,
       });
     } else if (
-      e.target[0].value === "Sanket Bhaiya" &&
+      e.target[0].value === "Sanket" &&
       e.target[1].value === "Ashray"
     ) {
       setBalance({
@@ -69,7 +69,7 @@ function App() {
         value1: balance.value1 - valueToUpdate,
       });
     } else if (
-      e.target[0].value === "Sanket Bhaiya" &&
+      e.target[0].value === "Sanket" &&
       e.target[1].value === "Aagman"
     ) {
       setBalance({

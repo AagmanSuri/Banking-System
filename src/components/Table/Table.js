@@ -1,15 +1,16 @@
 import React from "react";
 import "./Table.css";
+import bank from './banking1.svg'
 const Table = (props) => {
   return (
     <div className="center">
-      
-      <table className="table,center">
+      <img src={bank} alt="finance"></img>
+      <table className="md">
         <thead>
-          <tr className="tr">
-            <th className="th">Firstname</th>
-            <th className="th">Lastname</th>
-            <th className="th">Balance</th>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Balance</th>
           </tr>
         </thead>
         <tbody>

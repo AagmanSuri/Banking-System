@@ -1,8 +1,10 @@
 import "./Banking.css";
 import React from "react";
+import bank from './banking.svg'
 const Banking1 = (props) => {
   return (
     <div style={{ textAlign: "center" }}>
+       <img src={bank} alt="finance"></img>
       <h1>Transfer Money</h1>
       <h2>This portal allows you to transfer money.</h2>
       <h3>Please fill the required details</h3>
@@ -11,12 +13,12 @@ const Banking1 = (props) => {
         <select>
           <option>Ashray</option>
           <option>Aagman</option>
-          <option>Sanket Bhaiya</option>
+          <option>Sanket</option>
         </select>
 <br></br><br></br>
         <label>Transfer From : </label>
         <select>
-          <option>Sanket Bhaiya</option>
+          <option>Sanket</option>
           <option>Aagman</option>
           <option>Ashray</option>
         </select>
