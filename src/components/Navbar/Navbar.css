@@ -1,16 +1,17 @@
-body{
-    margin:0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
-ul{
-    text-decoration: none;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    
+ul {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  
 }
-.Link{
-text-decoration: none;
-list-style: none;
-color: white;
+.Link {
+  text-decoration: none;
+  list-style: none;
+  font-weight: bold;
+  color: white;
 }

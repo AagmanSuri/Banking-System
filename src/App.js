@@ -20,8 +20,8 @@ function App() {
     console.log(e.target[0].value);
     console.log(e.target[1].value);
     console.log(e.target[2].value);
-
-    const valueToUpdate = Number(e.target[2].value);
+    
+     const valueToUpdate = Number(e.target[2].value);
 
     if (
       e.target[0].value === "Ashray" &&

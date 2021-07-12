@@ -2,6 +2,9 @@ import "./Banking.css";
 import React from "react";
 import bank from "./banking.svg";
 const Banking1 = (props) => {
+  const tranferbtn = () => {
+    alert(`Transcation sucessful`);
+  };
   return (
     <div style={{ textAlign: "center" }}>
       <img src={bank} alt="finance"></img>
@@ -10,7 +13,7 @@ const Banking1 = (props) => {
       <h3>Please fill the required details</h3>
       <form onSubmit={props.handleForm}>
         <label>Transfer to : </label>
-        <select>
+        <select required>
           <option>Ashray</option>
           <option>Aagman</option>
           <option>Sanket</option>
@@ -18,14 +21,18 @@ const Banking1 = (props) => {
         <br></br>
         <br></br>
         <label>Transfer From : </label>
-        <select>
+        <select required>
           <option>Sanket</option>
           <option>Aagman</option>
           <option>Ashray</option>
         </select>
-        <h4>Amount to Transfer</h4>
-        <input></input>
-        <button type="submit">transfer</button>
+        <br></br>
+        <br></br>
+        <label>Amount to transfer : </label>
+        <input type="Number" required></input>
+        <button type="submit" onClick={tranferbtn}>
+          transfer
+        </button>
       </form>
     </div>
   );
