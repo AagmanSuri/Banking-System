@@ -5,10 +5,11 @@ import Table from "./components/Table/Table";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Particles from "react-particles-js";
+import Transcation from './components/Transcations/Transcation'
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
-  const name = [
+  const [name,setName] = useState([
     "Ashray",
     "Aagman",
     "Sanket",
@@ -19,7 +20,7 @@ function App() {
     "Rakshit",
     "Samridh",
     "Aditya",
-  ];
+  ]);
   const [balance, setBalance] = useState(
     [
       1000, //ashray
@@ -34,7 +35,8 @@ function App() {
       10000,
     ] //Aditya
   );
-
+  const [indexofOption1,setIndexofOption1] =useState(0)
+  const [indexofOption2,setIndexofOption2] =useState(0)
   const handleForm = (e) => {
     e.preventDefault();
 
@@ -47,11 +49,12 @@ function App() {
     const input2 = e.target[1].value;
 
     //index value of the name input in option
-
-    const indexofOption1 = name.indexOf(input1);
+    
+    setIndexofOption1( name.indexOf(input1));
     // console.log(indexofOption1);
 
-    const indexofOption2 = name.indexOf(input2);
+    
+    setIndexofOption2( name.indexOf(input2));
     // console.log(indexofOption2);
     const increment = balance[indexofOption1] + valueToUpdate;
     const decrement = balance[indexofOption2] - valueToUpdate;
@@ -85,11 +88,15 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route
             path="/Banking"
-            component={(props) => <Banking1 handleForm={handleForm} />}
+            component={(props) => <Banking1 handleForm={handleForm}/>}
           />
           <Route
             path="/CoustomerData"
             component={(props) => <Table balance={balance} />}
+          />
+          <Route
+            path="/Transcations"
+            component={(props) => <Transcation name={name} indexofOption1={indexofOption1} indexofOption2={indexofOption2} balance={balance} /> }
           />
         </Switch>
       </div>
