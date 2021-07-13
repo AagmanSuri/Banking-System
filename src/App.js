@@ -5,11 +5,11 @@ import Table from "./components/Table/Table";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Particles from "react-particles-js";
-import Transcation from './components/Transcations/Transcation'
+import Transcation from "./components/Transcations/Transcation";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
-  const [name,setName] = useState([
+  const name = [
     "Ashray",
     "Aagman",
     "Sanket",
@@ -20,23 +20,21 @@ function App() {
     "Rakshit",
     "Samridh",
     "Aditya",
+  ];
+  const [balance, setBalance] = useState([
+    1000, //ashray
+    2000, //aagman
+    3000, //sanket
+    4000, //harshit
+    5000, //vansh       //balance can be acessed by balance[]
+    6000, //Hargun
+    7000, //Assad
+    8000, //Rakshit
+    9000, //Samridh
+    10000, //Aditya
   ]);
-  const [balance, setBalance] = useState(
-    [
-      1000, //ashray
-      2000, //aagman
-      3000, //sanket
-      4000, //harshit
-      5000, //vansh       //balance can be acessed by balance[]
-      6000, //Hargun
-      7000, //Assad
-      8000, //Rakshit
-      9000, //Samridh
-      10000,
-    ] //Aditya
-  );
-  const [indexofOption1,setIndexofOption1] =useState(0)
-  const [indexofOption2,setIndexofOption2] =useState(0)
+  // const [indexofOption1,setIndexofOption1] =useState()
+  // const [indexofOption2,setIndexofOption2] =useState()
   const handleForm = (e) => {
     e.preventDefault();
 
@@ -49,24 +47,25 @@ function App() {
     const input2 = e.target[1].value;
 
     //index value of the name input in option
-    
-    setIndexofOption1( name.indexOf(input1));
+
+    const indexofOption1 = name.indexOf(input1);
     // console.log(indexofOption1);
 
-    
-    setIndexofOption2( name.indexOf(input2));
+    const indexofOption2 = name.indexOf(input2);
     // console.log(indexofOption2);
     const increment = balance[indexofOption1] + valueToUpdate;
     const decrement = balance[indexofOption2] - valueToUpdate;
     console.log(increment);
     console.log(decrement);
-    console.log((balance[indexofOption1] = increment),
-    (balance[indexofOption2] = decrement))
-    setBalance(balance=>
-      [...balance,
+    console.log(
       (balance[indexofOption1] = increment),
-      (balance[indexofOption2] = decrement)]
+      (balance[indexofOption2] = decrement)
     );
+    setBalance((balance) => [
+      ...balance,
+      (balance[indexofOption1] = increment),
+      (balance[indexofOption2] = decrement),
+    ]);
   };
   const particlesOption = {
     particles: {
@@ -88,7 +87,7 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route
             path="/Banking"
-            component={(props) => <Banking1 handleForm={handleForm}/>}
+            component={(props) => <Banking1 handleForm={handleForm} />}
           />
           <Route
             path="/CoustomerData"
@@ -96,7 +95,7 @@ function App() {
           />
           <Route
             path="/Transcations"
-            component={(props) => <Transcation name={name} indexofOption1={indexofOption1} indexofOption2={indexofOption2} balance={balance} /> }
+            component={(props) => <Transcation name={name} balance={balance} />}
           />
         </Switch>
       </div>

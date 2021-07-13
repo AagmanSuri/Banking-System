@@ -8,7 +8,7 @@ function Transcation(props) {
             <p>updated balance{props.balance[props.indexofOption1]}</p>
             <h2>Money Tranfered from {props.name[props.indexofOption2]}</h2>
             <p>updated balance{props.balance[props.indexofOption2]}</p>
- 
+            
         </div>
     )
 }
