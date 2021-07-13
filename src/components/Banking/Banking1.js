@@ -29,8 +29,8 @@ const Banking1 = (props) => {
         <br></br>
         <label>Transfer From : </label>
         <select required>
-          <option>Ashray</option>
           <option>Aagman</option>
+          <option>Ashray</option>
           <option>Sanket</option>
           <option>Harshit</option>
           <option>Vansh</option>
