@@ -33,6 +33,12 @@ function App() {
     9000, //Samridh
     10000, //Aditya
   ]);
+
+  //ISSUE one value lag
+
+  //trail check:
+  // const [input3,setInput3]=useState(0);
+
   // const [indexofOption1,setIndexofOption1] =useState()
   // const [indexofOption2,setIndexofOption2] =useState()
   const handleForm = (e) => {
@@ -45,6 +51,11 @@ function App() {
     const valueToUpdate = Number(e.target[2].value);
     const input1 = e.target[0].value;
     const input2 = e.target[1].value;
+    //const inputnum = e.target[2].value;
+
+    //trail continues
+
+    //setInput3(inputnum);
 
     //index value of the name input in option
 
@@ -70,10 +81,10 @@ function App() {
   const particlesOption = {
     particles: {
       number: {
-        value: 30,
+        value: 46,
         density: {
           enable: true,
-          value_area: 800,
+          value_area: 900,
         },
       },
     },

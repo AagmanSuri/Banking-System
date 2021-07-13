@@ -3,7 +3,8 @@ import React from "react";
 import bank from "./Banking2.svg";
 const Banking1 = (props) => {
   const tranferbtn = () => {
-    alert(`Transcation sucessful`);
+   // alert(`Transcation sucessful`);
+   console.log('useState',props.input3)
   };
   return (
     <div style={{ textAlign: "center" }}>
@@ -44,7 +45,7 @@ const Banking1 = (props) => {
         <br></br>
         <label>Amount to transfer : </label>
         <input type="Number" required></input>
-        <button type="submit" onClick={tranferbtn}>
+        <button disabled={props.input3===null}  type="submit" onClick={tranferbtn}  >
           Transfer
         </button>
       </form>
