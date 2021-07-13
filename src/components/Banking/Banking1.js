@@ -17,21 +17,35 @@ const Banking1 = (props) => {
           <option>Ashray</option>
           <option>Aagman</option>
           <option>Sanket</option>
+          <option>Harshit</option>
+          <option>Vansh</option>
+          <option>Hargun</option>
+          <option>Assad</option>
+          <option>Rakshit</option>
+          <option>Samridh</option>
+          <option>Aditya</option>
         </select>
         <br></br>
         <br></br>
         <label>Transfer From : </label>
         <select required>
-          <option>Sanket</option>
-          <option>Aagman</option>
           <option>Ashray</option>
+          <option>Aagman</option>
+          <option>Sanket</option>
+          <option>Harshit</option>
+          <option>Vansh</option>
+          <option>Hargun</option>
+          <option>Assad</option>
+          <option>Rakshit</option>
+          <option>Samridh</option>
+          <option>Aditya</option>
         </select>
         <br></br>
         <br></br>
         <label>Amount to transfer : </label>
         <input type="Number" required></input>
         <button type="submit" onClick={tranferbtn}>
-          transfer
+          Transfer
         </button>
       </form>
     </div>

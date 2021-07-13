@@ -12,6 +12,13 @@ function App() {
     value1: 1000, //ashray
     value2: 2000, //aagman
     value3: 3000, //sanket
+    value4: 4000, //harshit
+    value5: 5000, //vansh
+    value6: 6000, //Hargun
+    value7: 7000, //Assad
+    value8: 8000, //Rakshit
+    value9: 9000, //Samridh
+    value10:10000, //Aditya
   });
 
   const handleForm = (e) => {
@@ -24,8 +31,8 @@ function App() {
      const valueToUpdate = Number(e.target[2].value);
 
     if (
-      e.target[0].value === "Ashray" &&
-      e.target[1].value === "Sanket"
+      e.target[0].value === "Ashray" &&//input1
+      e.target[1].value === "Sanket"//input2
     ) {
       setBalance({
         ...balance,
