@@ -1,6 +1,6 @@
 import "./Banking.css";
 import React from "react";
-import bank from "./banking.svg";
+import bank from "./Banking2.svg";
 const Banking1 = (props) => {
   const tranferbtn = () => {
     alert(`Transcation sucessful`);
