@@ -59,10 +59,10 @@ function App() {
     console.log(decrement);
     console.log((balance[indexofOption1] = increment),
     (balance[indexofOption2] = decrement))
-    setBalance(
-      ...balance,
+    setBalance(balance=>
+      [...balance,
       (balance[indexofOption1] = increment),
-      (balance[indexofOption2] = decrement)
+      (balance[indexofOption2] = decrement)]
     );
   };
   const particlesOption = {
