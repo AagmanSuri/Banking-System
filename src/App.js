@@ -34,7 +34,6 @@ function App() {
     10000, //Aditya
   ]);
 
-
   const handleForm = (e) => {
     e.preventDefault();
 
