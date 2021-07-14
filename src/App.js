@@ -5,7 +5,7 @@ import Table from "./components/Table/Table";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Particles from "react-particles-js";
-import Transcation from "./components/Transcations/Transcation";
+// import Transcation from "./components/Transcations/Transcation";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
@@ -34,13 +34,7 @@ function App() {
     10000, //Aditya
   ]);
 
-  //ISSUE one value lag
 
-  //trail check:
-  // const [input3,setInput3]=useState(0);
-
-  // const [indexofOption1,setIndexofOption1] =useState()
-  // const [indexofOption2,setIndexofOption2] =useState()
   const handleForm = (e) => {
     e.preventDefault();
 
@@ -51,11 +45,6 @@ function App() {
     const valueToUpdate = Number(e.target[2].value);
     const input1 = e.target[0].value;
     const input2 = e.target[1].value;
-    //const inputnum = e.target[2].value;
-
-    //trail continues
-
-    //setInput3(inputnum);
 
     //index value of the name input in option
 
@@ -104,10 +93,10 @@ function App() {
             path="/CoustomerData"
             component={(props) => <Table balance={balance} />}
           />
-          <Route
+          {/* <Route
             path="/Transcations"
             component={(props) => <Transcation name={name} balance={balance} />}
-          />
+          /> */}
         </Switch>
       </div>
     </Router>

@@ -4,7 +4,7 @@ import bank from "./Banking2.svg";
 
 const Banking1 = (props) => {
   const tranferbtn = () => {
-    // alert(`Transcation sucessful`);
+    alert(`Transcation sucessful`);
     console.log("useState", props.input3);
   };
   return (
